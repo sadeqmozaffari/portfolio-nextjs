@@ -14,7 +14,7 @@ function LargeNav() {
   const navItems = [
     {path: '/', name: 'Home', icon: <LiaIdCard />},
     {path: '/resume', name: 'Resume', icon: <MdWorkOutline />},
-    {path: '/porfolio', name: 'Porfolio', icon: <GrProjects />},
+    {path: '/portfolio', name: 'Porfolio', icon: <GrProjects />},
     {path: '/contact', name: 'Contact', icon: <RiContactsBookLine />},
   ];
 

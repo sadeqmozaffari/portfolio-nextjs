@@ -11,6 +11,7 @@ import {GrDocumentUser} from 'react-icons/gr';
 import {RiContactsBookLine} from 'react-icons/ri';
 import Image from 'next/image';
 import cc from '../../../public/images/cc.png';
+import Link from 'next/link';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,32 +58,40 @@ function Navbar() {
       <div
         className={`absolute top-[20%] mt-2 w-[95%] bg-white dark:bg-gray-800 rounded-lg lg:hidden shadow-lg overflow-hidden transition-all duration-500 transform origin-top ${isOpen ? 'scale-y-100' : 'scale-y-0'} self-center`}
       >
-        <ul className="py-2 px-3">
-          <li
-            className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 dark:text-gray-300 hover:text-red-500 cursor-pointer flex items-center`}
-          >
-            <LiaIdCard className="text-xl" />
-            <span className="ml-2 text-sm font-normal">About</span>
-          </li>
-          <li
-            className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 dark:text-gray-300 hover:text-red-500 cursor-pointer flex items-center`}
-          >
-            <GrDocumentUser className="text-base" />
-            <span className="ml-2 text-sm font-normal">Resume</span>
-          </li>
-          <li
-            className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 dark:text-gray-300 hover:text-red-500 cursor-pointer flex items-center`}
-          >
-            <IoBriefcaseOutline className="text-xl" />
-            <span className="ml-2 text-sm font-normal">Works</span>
-          </li>
-          <li
-            className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 dark:text-gray-300 hover:text-red-500 cursor-pointer flex items-center`}
-          >
-            <RiContactsBookLine className="text-xl" />
-            <span className="ml-2 text-sm font-normal">Contact</span>
-          </li>
-        </ul>
+        <div className="py-2 px-3 flex flex-col ">
+          <Link href="/" onClick={toggleMenu}>
+            <div
+              className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 dark:text-gray-300 hover:text-red-500 cursor-pointer flex items-center`}
+            >
+              <LiaIdCard className="text-xl" />
+              <span className="ml-2 text-sm font-normal">About</span>
+            </div>
+          </Link>
+          <Link href="/resume" onClick={toggleMenu}>
+            <div
+              className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 dark:text-gray-300 hover:text-red-500 cursor-pointer flex items-center`}
+            >
+              <GrDocumentUser className="text-base" />
+              <span className="ml-2 text-sm font-normal">Resume</span>
+            </div>
+          </Link>
+          <Link href="/portfolio" onClick={toggleMenu}>
+            <div
+              className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 dark:text-gray-300 hover:text-red-500 cursor-pointer flex items-center`}
+            >
+              <IoBriefcaseOutline className="text-xl" />
+              <span className="ml-2 text-sm font-normal">Works</span>
+            </div>
+          </Link>
+          <Link href="/contact" onClick={toggleMenu}>
+            <div
+              className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 dark:text-gray-300 hover:text-red-500 cursor-pointer flex items-center`}
+            >
+              <RiContactsBookLine className="text-xl" />
+              <span className="ml-2 text-sm font-normal">Contact</span>
+            </div>
+          </Link>
+        </div>
       </div>
     </div>
   );
