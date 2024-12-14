@@ -74,16 +74,16 @@ function Resume() {
               </div>
               <div className=" flex flex-row justify-center items-center gap-4 lg:ml-4">
                 <DetailCard
-                  classes="flex flex-col bg-sky-100 dark:bg-gray-700 w-[95%] self-center p-2 rounded-2xl mb-8 shadow-md"
-                  header="2012"
-                  title="Graduated school"
-                  description="Sayed Ismail Balkhi in Mazar-e-sharif "
-                />
-                <DetailCard
                   classes="flex flex-col bg-rose-50 dark:bg-gray-700 w-[95%] self-center p-2 rounded-2xl mb-8 shadow-md"
                   header="Mar 2014 - Dec 2018"
                   title="Bachelor of Computer Science"
                   description="Kabul Polytechnic University, Kabul, Afghanistan"
+                />
+                <DetailCard
+                  classes="flex flex-col bg-sky-100 dark:bg-gray-700 w-[95%] self-center p-2 rounded-2xl mb-8 shadow-md"
+                  header="2012"
+                  title="Graduated school"
+                  description="Sayed Ismail Balkhi in Mazar-e-sharif "
                 />
               </div>
             </div>
