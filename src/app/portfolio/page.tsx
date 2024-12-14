@@ -4,6 +4,7 @@ import azi from '../../../public/images/azi.jpg';
 import azmoon from '../../../public/images/azmoon.png';
 import appImg from '../../../public/images/app.webp';
 import Image from 'next/image';
+
 const works = [
   {
     id: 2,
@@ -46,34 +47,36 @@ const works = [
 const Portfolio = () => {
   return (
     <div className="flex flex-col bg-white dark:bg-gray-800 m-5 mt-10 rounded-[18px] items-start p-5 ">
-      <div className="flex flex-row  m-4 mt-10 items-center ">
-        <h1 className="font-bold text-3xl font-robotoslab dark:text-white">
-          Portfolio
-        </h1>
-        <div className="bg-gradient-to-r to-pink-500 from-rose-500 dark:to-pink-300 dark:from-rose-300 w-[10rem] h-[0.2rem] rounded-lg ml-6" />
-      </div>
+   
+        <div className="flex flex-row  m-4 mt-10 items-center ">
+          <h1 className="font-bold text-3xl font-robotoslab dark:text-white">
+            Portfolio
+          </h1>
+          <div className="bg-gradient-to-r to-pink-500 from-rose-500 dark:to-pink-300 dark:from-rose-300 w-[10rem] h-[0.2rem] rounded-lg ml-6" />
+        </div>
 
-      <div className="w-full lg:mt-5 mb-10 grid grid-cols-1 xl:grid-cols-1 2xl:grid-cols-2 3xl:grid-cols-3 gap-6 items-center justify-items-center">
-        {works.map((item) => (
-          <ShowCase
-            key={item.id}
-            title={item.title}
-            description={item.description}
-            link={item.link}
-            Img={
-              <Image
-                className="object-cover w-full rounded-sm"
-                src={item.img}
-                alt={item.title}
-                width={400}
-                height={400}
-                priority
-                quality={80}
-              />
-            }
-          />
-        ))}
-      </div>
+        <div className="w-full lg:mt-5 mb-10 grid grid-cols-1 xl:grid-cols-1 2xl:grid-cols-2 3xl:grid-cols-3 gap-6 items-center justify-items-center">
+          {works.map((item) => (
+            <ShowCase
+              key={item.id}
+              title={item.title}
+              description={item.description}
+              link={item.link}
+              Img={
+                <Image
+                  className="object-cover w-full rounded-sm"
+                  src={item.img}
+                  alt={item.title}
+                  width={400}
+                  height={400}
+                  priority
+                  quality={80}
+                />
+              }
+            />
+          ))}
+        </div>
+ 
     </div>
   );
 };

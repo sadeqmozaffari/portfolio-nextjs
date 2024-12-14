@@ -15,6 +15,7 @@ function Navbar() {
   const themeMode = themeStore.theme;
 
   const toggleMenu = () => {
+    
     setIsOpen(!isOpen);
   };
 
