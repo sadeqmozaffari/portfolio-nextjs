@@ -1,6 +1,7 @@
 {
   "name": "portfolio-nextjs",
   "version": "0.1.0",
+  "homepage": "https://sadeqmozaffari.github.io/portfolio-nextjs",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
