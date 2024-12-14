@@ -48,9 +48,9 @@ function ContactForm() {
         case 'name':
           return 'text-red-500 after:bg-red-500';
         case 'email':
-          return 'text-blue-500 after:bg-blue-500';
+          return 'text-red-500 after:bg-red-500';
         case 'message':
-          return 'text-purple-500 after:bg-purple-500';
+          return 'text-red-500 after:bg-red-500';
         default:
           return '';
       }
@@ -64,7 +64,6 @@ function ContactForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
-
     // Validation
     if (!values.name || !validateEmail(values.email) || !values.message) {
       toast.error('Please fill out all fields correctly.');
