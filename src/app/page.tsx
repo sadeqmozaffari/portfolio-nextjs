@@ -14,7 +14,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center 2xl:flex-row 2xl:items-center 2xl:justify-around m-4">
           <Image src={HomeImage} alt="Home" className="w-96 lg:w-[30rem]" />
-          <p className="font-poppins text-gray-600 dark:text-gray-300 tracking-wider lg:tracking-normal lg:text-lg ">
+          <p className="font-poppins text-gray-600 dark:text-gray-300 tracking-wider lg:tracking-normal lg:text-lg  text-justify">
             I’m a Full Stack Developer with years of experience in crafting
             dynamic and user-friendly web applications. My portfolio spans
             projects like a Hospital Management System, websites, and a live
@@ -26,7 +26,7 @@ export default function Home() {
             and .NET Core. My focus is to simplify complex concepts and create
             seamless digital experiences that exceed expectations. Whether
             working independently or collaborating with a team, I always ensure
-            high-quality, efficient results. I'm dedicated to continuous
+            high-quality, efficient results. I&apos;m dedicated to continuous
             learning and staying ahead of the latest trends in web development.
             Thanks for exploring my portfolio — I look forward to collaborating
             with you on your next project!
@@ -69,10 +69,8 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <DetailCard
-                classes="flex flex-col bg-lime-100 dark:bg-gray-700 w-[95%] self-center p-2 rounded-2xl mb-5 shadow-md lg:m-4"
-                header={
-                  <FaWrench className="text-green-500 dark:text-green-300" />
-                }
+                classes="flex flex-col bg-rose-50 dark:bg-gray-700 w-[95%] self-center p-2 rounded-2xl mb-5 shadow-md lg:m-4"
+                header={<FaWrench className="text-red-500 dark:text-red-300" />}
                 title="Web Maintenance & Support"
                 description="I provide ongoing website maintenance, including regular updates, security patches, and performance optimization, ensuring your site remains secure, fast, and fully functional."
               />

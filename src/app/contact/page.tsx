@@ -12,12 +12,12 @@ function Contact() {
       </div>
       <div className="flex flex-col m-10  w-full self-center p-10">
         <h2 className="font-poppins text-3xl text-gray-500 tracking-wide">
-          Let's Connect!
+          Let&apos;s Connect!
         </h2>
         <h1 className="font-poppins mt-5 text-gray-700 dark:text-gray-300">
           Have questions or project ideas?
           <br />
-          Fill out the form below and I'll get back to you as soon as possible.
+          Fill out the form below and I&apos;ll get back to you as soon as possible.
         </h1>
         <ContactForm />
       </div>

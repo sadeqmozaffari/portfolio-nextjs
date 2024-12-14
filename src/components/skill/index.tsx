@@ -4,11 +4,13 @@ import {FaStar, FaRegStar} from 'react-icons/fa';
 import {motion} from 'framer-motion';
 
 const skills = [
+  {name: 'Nextjs', rating: 4},
+  {name: '.NET', rating: 4},
   {name: 'JavaScript', rating: 4},
-  {name: 'React', rating: 4},
+  {name: 'Reactjs', rating: 3},
   {name: 'Tailwind CSS', rating: 4},
-  {name: 'Java', rating: 3},
-  {name: 'Spring Boot', rating: 4},
+  {name: 'Bootstrap', rating: 4},
+  {name: 'HTML & CSS', rating: 4},
 ];
 interface SkillProps {
   name: string;

@@ -1,16 +1,13 @@
 'use client';
 
 import React, {useState} from 'react';
-import {
-  IoMoonOutline,
-  IoBriefcaseOutline,
-  IoSunnyOutline,
-} from 'react-icons/io5';
+import {IoMoonOutline, IoSunnyOutline} from 'react-icons/io5';
 import {LiaIdCard} from 'react-icons/lia';
-import {GrDocumentUser} from 'react-icons/gr';
-import {RiContactsBookLine} from 'react-icons/ri';
+import {GrProjects} from 'react-icons/gr';
+import {RiContactsBookLine, RiStackLine} from 'react-icons/ri';
 import Link from 'next/link';
 import {useThemeStore} from '../../store';
+import {MdWorkOutline} from 'react-icons/md';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,16 +72,24 @@ function Navbar() {
             <div
               className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 dark:text-gray-300 hover:text-red-500 cursor-pointer flex items-center`}
             >
-              <GrDocumentUser className="text-base" />
+              <MdWorkOutline className="text-base" />
               <span className="ml-2 text-sm font-normal">Resume</span>
+            </div>
+          </Link>
+          <Link href="/skill" onClick={toggleMenu}>
+            <div
+              className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 dark:text-gray-300 hover:text-red-500 cursor-pointer flex items-center`}
+            >
+              <RiStackLine className="text-base" />
+              <span className="ml-2 text-sm font-normal">Skill</span>
             </div>
           </Link>
           <Link href="/portfolio" onClick={toggleMenu}>
             <div
               className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 dark:text-gray-300 hover:text-red-500 cursor-pointer flex items-center`}
             >
-              <IoBriefcaseOutline className="text-xl" />
-              <span className="ml-2 text-sm font-normal">Works</span>
+              <GrProjects className="text-xl" />
+              <span className="ml-2 text-sm font-normal">Portfolio</span>
             </div>
           </Link>
           <Link href="/contact" onClick={toggleMenu}>

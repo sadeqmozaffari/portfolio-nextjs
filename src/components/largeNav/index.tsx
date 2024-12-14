@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import {LiaIdCard} from 'react-icons/lia';
-import {RiContactsBookLine} from 'react-icons/ri';
+import {RiContactsBookLine, RiStackLine} from 'react-icons/ri';
 import NavBlocks from '../navBlocks';
 import {usePathname} from 'next/navigation';
 import Link from 'next/link';
@@ -12,8 +12,9 @@ function LargeNav() {
   const currentPath = usePathname();
 
   const navItems = [
-    {path: '/', name: 'Home', icon: <LiaIdCard />},
+    {path: '/', name: 'About', icon: <LiaIdCard />},
     {path: '/resume', name: 'Resume', icon: <MdWorkOutline />},
+    {path: '/skill', name: 'Tech Skills', icon: <RiStackLine />},
     {path: '/portfolio', name: 'Porfolio', icon: <GrProjects />},
     {path: '/contact', name: 'Contact', icon: <RiContactsBookLine />},
   ];
