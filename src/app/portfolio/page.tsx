@@ -1,9 +1,13 @@
 import React from 'react';
 import ShowCase from '../../components/showCase';
+import azi from '../../../public/images/azi.jpg';
+import azmoon from '../../../public/images/azmoon.png';
+import appImg from '../../../public/images/app.webp';
+import Image from 'next/image';
 const works = [
   {
     id: 2,
-    title: 'Victor Azmoon Tolo TV Program',
+    title: 'Victor Azmoon ',
     description: `The Tolo TV Quiz Program is an interactive quiz system developed using .NET Core and ReactJS. It offers:
 
     Quiz Creation: Admins manage categories, questions, and answers.
@@ -13,7 +17,7 @@ const works = [
     User-Friendly Design: Easy for participants and administrators to use.
 
     This system adds value to TV programming by creating engaging, interactive quiz experiences.`,
-    img: '/images/azmoon.png',
+    img: azmoon, // مقدار به صورت مستقیم
     link: 'https://www.youtube.com/watch?v=kUrJ_Ppjj3s&list=PLL-67kOONlabo_THZx2gywKwP4jSHguBQ&index=33',
   },
   {
@@ -27,18 +31,18 @@ const works = [
     Secure and Reliable: Built with robust security measures for data protection.
 
     This website demonstrates a clean and efficient approach to showcasing services and information.`,
-    img: '/images/azi.jpg',
+    img: azi, // مقدار به صورت مستقیم
     link: 'https://www.azi.af/',
   },
   {
     id: 3,
     title: 'Websites and Web Applications',
     description: `I have developed several projects, including a hospital management system and an accounting system for a small manufacturing company, using ASP.NET Core and SQL Server. I have also built and managed various websites, ensuring they are secure, easy to use, and perform well. My work includes maintaining these websites to keep them running smoothly.`,
-
-    img: '/images/app.webp',
+    img: appImg, // مقدار به صورت مستقیم
     link: 'https://www.youtube.com/watch?v=UYh0CLkC8GM&rco=1',
   },
 ];
+
 const Portfolio = () => {
   return (
     <div className="flex flex-col bg-white dark:bg-gray-800 m-5 mt-10 rounded-[18px] items-start p-5 ">
@@ -56,7 +60,17 @@ const Portfolio = () => {
             title={item.title}
             description={item.description}
             link={item.link}
-            img={item.img}
+            Img={
+              <Image
+                className="object-cover w-full rounded-sm"
+                src={item.img}
+                alt={item.title}
+                width={400}
+                height={400}
+                priority
+                quality={80}
+              />
+            }
           />
         ))}
       </div>
