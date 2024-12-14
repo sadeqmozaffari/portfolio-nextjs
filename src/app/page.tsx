@@ -1,6 +1,4 @@
 'use client';
-import Image from 'next/image';
-import HomeImage from '../../public/images/Home.png';
 import DetailCard from '../components/detailCard';
 import {FaCode, FaInfinity, FaWrench} from 'react-icons/fa';
 
@@ -12,8 +10,8 @@ export default function Home() {
           <h1 className="font-bold text-3xl font-robotoslab">About</h1>
           <div className="bg-gradient-to-r to-pink-500 from-rose-500 dark:to-pink-300 dark:from-rose-300 w-[10rem] h-[0.2rem] rounded-lg ml-6" />
         </div>
-        <div className="flex flex-col items-center 2xl:flex-row 2xl:items-center 2xl:justify-around m-4">
-          <Image src={HomeImage} alt="Home" className="w-96 lg:w-[30rem]" />
+        <div className="flex  items-center 2xl:flex-row 2xl:items-center 2xl:justify-around m-4">
+          {/* <Image src={HomeImage} alt="Home" className="w-96 lg:w-[30rem]" /> */}
           <p className="font-poppins text-gray-600 dark:text-gray-300 tracking-wider lg:tracking-normal lg:text-lg  text-justify">
             I’m a Full Stack Developer with years of experience in crafting
             dynamic and user-friendly web applications. My portfolio spans
