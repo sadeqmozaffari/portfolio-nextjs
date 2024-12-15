@@ -1,17 +1,18 @@
 'use client';
 import {motion} from 'framer-motion';
 import React from 'react';
+import CustomImage from '../image';
 
 interface ShowCaseProps {
-  Img: React.ReactNode;
   title: string;
   description: string;
   link: string;
+  url: string;
 }
 
-const ShowCase = ({Img, title, description, link}: ShowCaseProps) => {
+const ShowCase = ({title, description, link, url}: ShowCaseProps) => {
   return (
-    <div className="">
+    <div className="shadow-lg">
       <motion.div
         className="flex items-center justify-center flex-col mt-4 "
         initial={{y: 10, opacity: 0}}
@@ -22,9 +23,13 @@ const ShowCase = ({Img, title, description, link}: ShowCaseProps) => {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 min-w-[350px] max-w-[800px]"
+          className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 min-w-[300px] max-w-[800px]"
         >
-          {Img}
+          <CustomImage
+            alt={title}
+            src={url}
+            classes="object-cover w-full rounded-sm"
+          />
           <div className="flex flex-col justify-between p-4 leading-normal">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {title}

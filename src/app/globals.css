@@ -11,9 +11,13 @@
 }
 
 body {
-  background-image: url('../../public/images/34.jpg');
+  /* background-image: url('../../public/images/34.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1));
+}
+.bodyDark{
+ background-color:rgb(55 65 81 / var(--tw-bg-opacity, 1));
 }
 
 @keyframes spin {

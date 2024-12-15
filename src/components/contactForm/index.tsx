@@ -103,7 +103,7 @@ function ContactForm() {
         </div>
       )}
       <form
-        className={isLoading ? 'w-full mt-8 blur-sm' : 'w-full mt-8'}
+        className={isLoading ? 'w-full  blur-sm' : 'w-full '}
         onSubmit={handleSubmit}
       >
         {(['name', 'email', 'message'] as Array<keyof typeof values>).map(
@@ -125,7 +125,7 @@ function ContactForm() {
                 {field === 'message' ? (
                   <textarea
                     id={field}
-                    rows={2}
+                    rows={1}
                     className="w-full pb-1 bg-transparent resize-none focus:outline-none mt-3"
                     onFocus={() => handleFocus(field)}
                     onBlur={() => handleBlur(field)}

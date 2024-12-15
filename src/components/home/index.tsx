@@ -14,7 +14,7 @@ const HomeLayoutComponent = ({child}: HomeLayoutComponentProps) => {
   const themeMode = themeStore.theme;
 
   return (
-    <div className={themeMode === 'dark' ? 'dark' : ''}>
+    <div className={themeMode === 'dark' ? 'bodyDark dark' : ''}>
       <div className="lg:hidden">
         <Navbar />
       </div>
@@ -22,7 +22,7 @@ const HomeLayoutComponent = ({child}: HomeLayoutComponentProps) => {
         <div>
           <ProfileContainer />
         </div>
-        <div className="lg:flex-2 lg:flex lg:flex-col lg:items-center lg:justify-center lg:mt-10">
+        <div className="lg:flex-2 lg:flex lg:flex-col lg:items-center lg:justify-center lg:mt-10 ">
           <div className="hidden lg:flex">
             <LargeNav />
           </div>

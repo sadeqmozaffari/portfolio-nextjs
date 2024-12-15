@@ -34,7 +34,7 @@ export default function Home() {
           <h1 className="font-medium text-2xl font-poppins mt-5 ml-4 mb-6">
             What I Do!
           </h1>
-          <div className="flex flex-col lg:flex-row lg:justify-start lg:items-start">
+          <div className="flex flex-col lg:flex-row sm:flex-col lg:justify-start lg:items-start">
             <div className="flex flex-col">
               <DetailCard
                 classes="flex flex-col bg-rose-50 dark:bg-gray-700 w-[95%] self-center p-2 rounded-2xl mb-5 shadow-md lg:m-4"
@@ -54,7 +54,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row lg:justify-start lg:items-start">
+          <div className="flex flex-col lg:flex-row sm:flex-col lg:justify-start lg:items-start">
             <div className="flex flex-col">
               <DetailCard
                 classes="flex flex-col bg-sky-100 dark:bg-gray-700 w-[95%] self-center p-2 rounded-2xl mb-5 shadow-md lg:m-4"

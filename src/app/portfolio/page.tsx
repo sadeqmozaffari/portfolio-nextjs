@@ -1,9 +1,5 @@
 import React from 'react';
 import ShowCase from '../../components/showCase';
-import azi from '../../../public/images/azi.jpg';
-import azmoon from '../../../public/images/azmoon.png';
-import appImg from '../../../public/images/app.webp';
-import Image from 'next/image';
 
 const works = [
   {
@@ -18,7 +14,7 @@ const works = [
     User-Friendly Design: Easy for participants and administrators to use.
 
     This system adds value to TV programming by creating engaging, interactive quiz experiences.`,
-    img: azmoon, // مقدار به صورت مستقیم
+    img: '/images/azmoon.png', // مقدار به صورت مستقیم
     link: 'https://www.youtube.com/watch?v=kUrJ_Ppjj3s&list=PLL-67kOONlabo_THZx2gywKwP4jSHguBQ&index=33',
   },
   {
@@ -32,14 +28,14 @@ const works = [
     Secure and Reliable: Built with robust security measures for data protection.
 
     This website demonstrates a clean and efficient approach to showcasing services and information.`,
-    img: azi, // مقدار به صورت مستقیم
+    img: '/images/azi.jpg', // مقدار به صورت مستقیم
     link: 'https://www.azi.af/',
   },
   {
     id: 3,
     title: 'Websites and Web Applications',
     description: `I have developed several projects, including a hospital management system and an accounting system for a small manufacturing company, using ASP.NET Core and SQL Server. I have also built and managed various websites, ensuring they are secure, easy to use, and perform well. My work includes maintaining these websites to keep them running smoothly.`,
-    img: appImg, // مقدار به صورت مستقیم
+    img: '/images/app.webp', // مقدار به صورت مستقیم
     link: 'https://www.youtube.com/watch?v=UYh0CLkC8GM&rco=1',
   },
 ];
@@ -47,36 +43,24 @@ const works = [
 const Portfolio = () => {
   return (
     <div className="flex flex-col bg-white dark:bg-gray-800 m-5 mt-10 rounded-[18px] items-start p-5 ">
-   
-        <div className="flex flex-row  m-4 mt-10 items-center ">
-          <h1 className="font-bold text-3xl font-robotoslab dark:text-white">
-            Portfolio
-          </h1>
-          <div className="bg-gradient-to-r to-pink-500 from-rose-500 dark:to-pink-300 dark:from-rose-300 w-[10rem] h-[0.2rem] rounded-lg ml-6" />
-        </div>
+      <div className="flex flex-row  m-4 mt-10 items-center ">
+        <h1 className="font-bold text-3xl font-robotoslab dark:text-white">
+          Portfolio
+        </h1>
+        <div className="bg-gradient-to-r to-pink-500 from-rose-500 dark:to-pink-300 dark:from-rose-300 w-[10rem] h-[0.2rem] rounded-lg ml-6" />
+      </div>
 
-        <div className="w-full lg:mt-5 mb-10 grid grid-cols-1 xl:grid-cols-1 2xl:grid-cols-2 3xl:grid-cols-3 gap-6 items-center justify-items-center">
-          {works.map((item) => (
-            <ShowCase
-              key={item.id}
-              title={item.title}
-              description={item.description}
-              link={item.link}
-              Img={
-                <Image
-                  className="object-cover w-full rounded-sm"
-                  src={item.img}
-                  alt={item.title}
-                  width={400}
-                  height={400}
-                  priority
-                  quality={80}
-                />
-              }
-            />
-          ))}
-        </div>
- 
+      <div className="w-full lg:mt-5 mb-10 grid grid-cols-1 lg:grid-cols-2 3xl:grid-cols-3 gap-6 items-center justify-items-center">
+        {works.map((item) => (
+          <ShowCase
+            key={item.id}
+            title={item.title}
+            description={item.description}
+            link={item.link}
+            url={item.img}
+          />
+        ))}
+      </div>
     </div>
   );
 };
