@@ -10,6 +10,7 @@ interface CustomImageProps {
 
 export default function CustomImage({src, alt, classes}: CustomImageProps) {
   const [isLoading, setIsLoading] = useState(true);
+  const BASE_PATH = process.env.NEXT_PUBLIC_URL_IMAGE || '';
 
   return (
     <div className="relative w-full h-full overflow-hidden">
@@ -19,7 +20,8 @@ export default function CustomImage({src, alt, classes}: CustomImageProps) {
         </div>
       )}
       <Image
-        src={src}
+        // src={src}
+        src={`${BASE_PATH}${src}`}
         alt={alt}
         // fill
         className={`transition-opacity duration-500 z-20 ${isLoading ? 'opacity-0' : 'opacity-100'} ${classes}`}
