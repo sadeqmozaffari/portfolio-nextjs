@@ -119,7 +119,7 @@ function ProfileContainer() {
         </div>
       </div>
       <a
-        href={`${BASE_PATH}sadeqcv2024.pdf`}
+        href={`${BASE_PATH}/sadeqcv2024.pdf`}
         download="sadeqCV.pdf"
         target="_blank"
       >
