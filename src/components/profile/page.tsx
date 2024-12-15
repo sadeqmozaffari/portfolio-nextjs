@@ -11,6 +11,7 @@ import Image from 'next/image';
 import {FaGithub} from 'react-icons/fa6';
 
 function ProfileContainer() {
+  const BASE_PATH = process.env.NEXT_PUBLIC_URL_IMAGE || '';
   return (
     <div className="flex flex-col bg-white m-5 mt-10 lg:mt-40 rounded-[18px] justify-center items-center p-5 lg:justify-start dark:bg-gray-800">
       <div className=" mt-11 lg:mt-0 lg:absolute lg:top-20 mb-7 w-[14rem] h-[14rem] rounded-lg md:w-[16rem] md:h-[16rem] lg:w-[10rem] lg:h-[10rem] ">
@@ -117,7 +118,11 @@ function ProfileContainer() {
           />
         </div>
       </div>
-      <a href={'/sadeqcv2024.pdf'} download="sadeqCV.pdf" target="_blank">
+      <a
+        href={`${BASE_PATH}sadeqcv2024.pdf`}
+        download="sadeqCV.pdf"
+        target="_blank"
+      >
         <div className="bg-gradient-to-r to-pink-500 from-rose-500  w-48 flex flex-row mb-5 justify-center items-center rounded-2xl p-2 mt-8 cursor-pointer ">
           <PiDownloadLight className="m-2 ml-2 text-white text-3xl lg:text-xl animate-bounce" />
           <p className="text-white text-lg font-poppins mr-2 lg:text-sm">
