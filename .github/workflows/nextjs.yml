@@ -16,6 +16,7 @@ env:
   NEXT_PUBLIC_EMAILJS_SERVICE_ID: service_26s2o9c
   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: template_hpql8oj
   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: 2Tp1TQ9RpDl3ndVWk
+  NEXT_PUBLIC_URL_IMAGE: /portfolio-nextjs
 
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
